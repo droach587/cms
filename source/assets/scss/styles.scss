@@ -1,0 +1,36 @@
+//  ==========================================================================
+//  Global style import Master File
+//  ==========================================================================
+    @import "compass";
+    @import "base/*";
+
+    @import 'foundation';
+    @include foundation-global-styles;
+    @include foundation-grid;
+    @include foundation-typography;
+    @include foundation-visibility-classes;
+    @include foundation-float-classes;
+    @include foundation-flex-classes;
+
+//  ==========================================================================
+//  Vendor, from Bower and Vendor
+//  ==========================================================================
+
+    @import "vendor/fontawesome/font-awesome.min";
+
+//  ==========================================================================
+//  Elements - such as heading, buttons, nav, footer
+//  ==========================================================================
+
+    @import 'elements/*.scss';
+
+//  ==========================================================================
+//  Modules - reused pieces,
+//  ==========================================================================
+
+    @import 'modules/*.scss';
+
+//  ==========================================================================
+//  Utilities - adjusting classes
+//  ==========================================================================
+    @import 'utilities/*.scss';
