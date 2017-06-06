@@ -3,3 +3,51 @@
 //  ==========================================================================
 
     @include font-face("FontAwesome", font-files("fontawesome-webfont.eot", "fontawesome-webfont.ttf", "fontawesome-webfont.woff"));
+
+  .nunito{
+    //light 300, regular 400, semi-bold 600, bold 700, black 900
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    &--light{
+      font-weight: 300;
+    }
+    &--semi-bold{
+      font-weight: 600;
+    }
+    &--bold{
+      font-weight: 700;
+    }
+    &--black{
+      font-weight: 900;
+    }
+  }
+
+  .lato{
+    //light 300, regular 400, bold 700, black 900
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    &--light{
+      font-weight: 300;
+    }
+    &--bold{
+      font-weight: 700;
+    }
+    &--black{
+      font-weight: 900;
+    }
+  }
+
+  .roboto-slab{
+    //thin 100, light 300, regular 400, bold 700
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    &--thin{
+        font-weight: 100;
+    }
+    &--light{
+      font-weight: 300;
+    }
+    &--bold{
+      font-weight: 700;
+    }
+  }
