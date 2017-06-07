@@ -10568,6 +10568,68 @@ module.exports = new MediaQueryDispatch();
 
 },{"2":2}]},{},[5])(5)
 });
+var menuJS = (function() {
+    /**
+     * Avoid Console Errors
+     *
+     *
+     */
+    (function() {
+        var method;
+        var noop = function() {};
+        var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+        var length = methods.length;
+        var console = (window.console = window.console || {});
+        while (length--) {
+            method = methods[length];
+            // Only stub undefined methods.
+            if (!console[method]) {
+                console[method] = noop;
+            }
+        }
+    }());
+    /**
+     * Simple Init Function
+     *
+     *
+     */
+
+    function init() {
+
+      var mobiMenu = '.js-mobi-menu-wrap';
+      var isVisible = 'isVisible';
+
+      $('.js-nav-togg').on('click', function(e){
+        $(mobiMenu).toggleClass(isVisible);
+        e.preventDefault();
+      });
+
+      $('.js-nav-close').on('click', function(e){
+        $(mobiMenu).toggleClass(isVisible);
+        e.preventDefault();
+      });
+
+      $(window).on('scroll', function(){
+        if($(document).scrollTop() >= 100){
+          $('.header').addClass('isFixed');
+          $('body').addClass('isFixed');
+        }else{
+          $('.header').removeClass('isFixed');
+          $('body').removeClass('isFixed');
+        }
+      });
+
+    }
+    /**
+     * Reveal All Methods here
+     *
+     *
+     */
+    return {
+        init: init
+    };
+})();
+
 var testJS = (function() {
     /**
      * Avoid Console Errors
@@ -10628,7 +10690,7 @@ var testJS = (function() {
 
 if (window.jQuery) {
     $(document).ready(function() {
-        testJS.init({});
+        menuJS.init({});
     });
 } else {
     console.log('%c jQuery dependecy is not loaded, please check the order of your source and concatenation.', 'background: #black; color: #00FFF3');

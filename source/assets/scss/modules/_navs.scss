@@ -1,0 +1,133 @@
+.header{
+  position: relative;
+}
+.header__main-nav,
+.header__li-nav{
+  padding: 1rem;
+  box-sizing: border-box;
+  ul li{
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    padding-bottom: 4px;
+    & + li { margin-left: .5rem; }
+    a{
+      color: white;
+      &:hover {
+        color: $robins-egg-blue;
+      }
+    }
+    &.isActive{
+      a{ color: $robins-egg-blue; }
+    }
+  }
+}
+
+.header__li-nav{
+  background: $cod-gray;
+}
+
+.header__main-nav{
+  position: relative;
+  z-index: 3;
+  ul li{
+    font-size: 2rem;
+    font-weight: 900;
+    box-sizing: border-box;
+    & + li{
+      margin-left: 1.5rem;
+    }
+    &.isActive{
+      padding-bottom: 0px;
+      border-bottom: 4px solid $robins-egg-blue;
+    }
+  }
+  &.isFocus{
+    background: $mine-shaft;
+  }
+}
+
+.header__logo{
+  position: absolute;
+  top:48px;
+  left:50%;
+  width: 240px;
+  margin-left: -685px;
+  z-index: 4;
+}
+
+.header__mobi-nav-togg{
+  position: absolute;
+  top: 14px;
+  left:14px;
+  background: transparent;
+  border: none;
+  z-index: 5;
+  i{
+    font-size: 2.5rem;
+    color: white;
+  }
+}
+
+.header__mobi-nav-close{
+  position: absolute;
+  top: 14px;
+  right:14px;
+  background: transparent;
+  border: none;
+  z-index: 5;
+  i{
+    font-size: 2.5rem;
+    color: $robins-egg-blue;
+  }
+}
+
+@include breakpoint(xlarge down){
+  .header__logo{
+    margin-left: 0;
+    left: 1rem;
+  }
+}
+
+@include breakpoint(medium down){
+  .header__logo{
+    left: 50%;
+    margin-left: -70px;
+    top: 20px;
+    img{
+      width: 140px;
+    }
+  }
+  .mobile-menu-wrap{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 999;
+    display: none;
+    visibility: hidden;
+    align-items: center;
+    &.isVisible{
+      display: flex;
+      visibility: visible;
+    }
+  }
+  .header__main-nav,
+  .header__li-nav{
+    background: white;
+    padding: 0;
+    ul li{
+      font-size: 1.5rem;
+      width: 100%;
+      font-weight: 400;
+      padding: .3rem 0;
+      & + li{
+        margin: 0;
+      }
+      a{
+        color: $robins-egg-blue;
+      }
+    }
+  }
+}

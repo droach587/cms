@@ -1,0 +1,66 @@
+.btn{
+  display: inline-block;
+  padding: 10px 20px 14px 20px;
+  border-radius: 28px;
+  border: 2px solid white;
+  color: white;
+  font: 700 1.5rem "Lato", sans-serif;
+  position: relative;
+  overflow: hidden;
+  &::before{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(white, 0);
+    opacity: 0;
+    content: '';
+    z-index: -1;
+  }
+  & + &{
+    margin-left: 1rem;
+  }
+}
+
+.btn--white{
+  border-color: white;
+  color:white;
+  &:hover{
+    color: darken($robins-egg-blue, 30%);
+    &::before{
+      background: rgba($robins-egg-blue, 1);
+      opacity: 1;
+      transition-duration: .2s;
+      transition-property: all;
+    }
+  }
+}
+
+.btn--purple{
+  border-color: $mardi-gras;
+  color: $mardi-gras;
+  &:hover{
+    color: white;
+    &::before{
+      background: $mardi-gras;
+      opacity: 1;
+      transition-duration: .2s;
+      transition-property: all;
+    }
+  }
+}
+
+.btn--blue{
+  border-color: $azure-radiance;
+  color: white;
+  &:hover{
+    color: white;
+    &::before{
+      background: $azure-radiance;
+      opacity: 1;
+      transition-duration: .2s;
+      transition-property: all;
+    }
+  }
+}
