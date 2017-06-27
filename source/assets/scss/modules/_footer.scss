@@ -41,12 +41,21 @@
     }
     &.facebook{
       background: #46669d;
+      &:hover{
+        background: rgba(#46669d, .6);
+      }
     }
     &.insta{
       background: #3f3f3f;
+      &:hover{
+        background: rgba(#3f3f3f, .6);
+      }
     }
     &.twitter{
       background: #00a8db;
+      &:hover{
+        background: rgba(#00a8db, .6);
+      }
     }
   }
 }
