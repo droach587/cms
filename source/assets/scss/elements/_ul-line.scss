@@ -1,0 +1,13 @@
+.ul-line{
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid rgba($mine-shaft, .2);
+  li{
+    display: inline-block;
+    width: 100%;
+    padding: .5rem 0;
+    & + li {
+      border-top: 1px solid rgba($mine-shaft, .2);
+    }
+  }
+}

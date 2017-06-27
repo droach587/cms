@@ -19,10 +19,17 @@
     position: relative;
     z-index: 2;
   }
+  &--small{
+    height: 300px;
+    margin-top: 0px;
+  }
 }
 
 @include breakpoint(medium down){
   .hero{
     margin-top: 0px;
+    &--small{
+      padding-top: 90px;
+    }
   }
 }

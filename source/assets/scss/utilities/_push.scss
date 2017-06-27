@@ -1,5 +1,10 @@
 $push-slug: push !default;
 
+
+//Small: any screen.
+//Medium: any screen 640 pixels or wider.
+//Large: any screen 1024 pixels or wider.
+
 @for $i from 0 through 20 {
 
     /*
@@ -21,21 +26,22 @@ $push-slug: push !default;
 }
 
 
-@include breakpoint(small down){
+@include breakpoint(large only){
 
 	@for $i from 1 through 20 {
 
-	    .#{$push-slug}--small-#{$i+'0'}{
+	    .#{$push-slug}--large-#{$i+'0'}{
 	    	margin-top: #{($i+'0')+'px'};
 	    }
 	}
 
-	.push--small-clear{
+	.push--medium-clear{
     margin-top: 0px;
   }
 }
 
-@include breakpoint(large down){
+
+@include breakpoint(medium only){
 
 	@for $i from 1 through 20 {
 
@@ -45,6 +51,22 @@ $push-slug: push !default;
 	}
 
 	.push--medium-clear{
+    margin-top: 0px;
+  }
+}
+
+
+
+@include breakpoint(medium down){
+
+	@for $i from 1 through 20 {
+
+	    .#{$push-slug}--small-#{$i+'0'}{
+	    	margin-top: #{($i+'0')+'px'};
+	    }
+	}
+
+	.push--small-clear{
     margin-top: 0px;
   }
 }

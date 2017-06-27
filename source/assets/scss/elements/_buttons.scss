@@ -7,6 +7,10 @@
   font: 700 1.5rem "Lato", sans-serif;
   position: relative;
   overflow: hidden;
+  min-width: 180px;
+  background: transparent;
+  -webkit-display:none;
+  cursor: pointer;
   &::before{
     position: absolute;
     top:0;
@@ -20,6 +24,39 @@
   }
   & + &{
     margin-left: 1rem;
+    @include breakpoint (medium down){
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+  &[type=submit]{
+    line-height: normal;
+  }
+}
+
+input.btn--purple{
+  &:hover{
+    background: $mardi-gras;
+  }
+}
+
+input.btn--white{
+  &:hover{
+    background: rgba($robins-egg-blue, 1);
+  }
+}
+
+input.btn--blue,
+input.btn--blue-inv,
+input.btn--blue-purple{
+  &:hover{
+    background: $azure-radiance;
+  }
+}
+
+input.btn--blue{
+  &:hover{
+    background: $azure-radiance;
   }
 }
 
@@ -61,6 +98,46 @@
       opacity: 1;
       transition-duration: .2s;
       transition-property: all;
+    }
+  }
+}
+
+.btn--blue-inv{
+  border-color: $azure-radiance;
+  color: $azure-radiance;
+  &:hover{
+    color: white;
+    &::before{
+      background: $azure-radiance;
+      opacity: 1;
+      transition-duration: .2s;
+      transition-property: all;
+    }
+  }
+}
+
+.btn--blue-purple{
+  border-color: $azure-radiance;
+  color: $mardi-gras;
+  &:hover{
+    color: white;
+    &::before{
+      background: $azure-radiance;
+      opacity: 1;
+      transition-duration: .2s;
+      transition-property: all;
+    }
+  }
+}
+
+
+.btn--text{
+  border-width: 0px;
+  color: $mardi-gras;
+  &:hover{
+    color: $azure-radiance;
+    &::before{
+      display: none;
     }
   }
 }

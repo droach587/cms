@@ -44,6 +44,15 @@
   &.isFocus{
     background: $mine-shaft;
   }
+  &--secondary{
+    ul li{
+      font-size: 1rem;
+      &.isActive{
+        border-bottom-color: $electric-violet;
+        a{ color: $electric-violet; }
+      }
+    }
+  }
 }
 
 .header__logo{
