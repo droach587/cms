@@ -12,4 +12,10 @@
   &--small{
     padding: 4rem 2rem;
   }
+  &--no-pad{
+    padding: 0 2rem 6rem 2rem;
+  }
+  &--border-bottom{
+    border-bottom: 4px solid white;
+  }
 }

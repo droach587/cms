@@ -1,7 +1,11 @@
 <div class="header row expanded">
 
-  <div class="header__logo">
+  <div class="header__logo header__logo--in-site">
+    {{#if bread}}
     <img src="/assets/img/cms-logo.svg" width="200" height="auto" />
+    {{else}}
+    <img src="/assets/img/cms-logo.svg" width="140" height="auto" />
+    {{/if}}
   </div>
 
   <button class="header__mobi-nav-togg js-nav-togg hide-for-large">
@@ -17,31 +21,31 @@
         <div class="row">
           <ul class="columns small-12 text-center large-text-right">
             <li>
-              <a href="#">Log In</a>
+              <a href="#">Welcome Back, David</a>
             </li>
+            <li> | </li>
             <li>
-              <a href="#">Register</a>
+              <a href="#">Account Settings</a>
             </li>
+            <li> | </li>
             <li>
               <a href="#">Help & Support</a>
+            </li>
+            <li> | </li>
+            <li>
+              <a href="#">Log Out</a>
             </li>
           </ul>
         </div>
       </nav>
-      <nav class="header__main-nav row expanded">
+      <nav class="header__main-nav row expanded bg--mine-shaft">
         <div class="row">
           <ul class="columns small-12 text-center large-text-right">
             <li>
-              <a href="#">How it Works</a>
+              <a href="#">Your Feed</a>
             </li>
             <li>
-              <a href="#">Brands</a>
-            </li>
-            <li>
-              <a href="#">Stylists</a>
-            </li>
-            <li>
-              <a href="#">Get Started</a>
+              <a href="#">Preferences</a>
             </li>
           </ul>
         </div>

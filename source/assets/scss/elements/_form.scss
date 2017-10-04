@@ -9,7 +9,7 @@
   }
 }
 
-input[type=text], input[type=email], input[type=telephone]{
+input[type=text], input[type=email], input[type=telephone], input[type=password]{
   padding: 10px 20px 14px 20px;
   border-radius: 28px;
   border: 2px solid $electric-violet;
@@ -89,4 +89,20 @@ textarea{
     font: 700 1.5rem "Lato", sans-serif;
     color: $mardi-gras;
   }
+}
+
+.hasError{
+  border-color: darken(red, 15%) !important;
+}
+
+.notify-change-made{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  background: darken(green, 10%);
+  z-index: 99;
 }
